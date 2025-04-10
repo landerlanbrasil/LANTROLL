@@ -1,142 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Lantroll</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f7f7f7;
         }
 
-        header,
-        footer {
+        header, footer {
             background-color: #800000;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 20px 10px;
         }
 
         .banner {
             width: 100%;
-            max-width: 100%;
+            height: auto;
             display: block;
         }
 
-        .section-qualidade {
+        .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 40px 20px;
-            background-color: #f9f9f9;
+            background-color: #f2f2f2;
             text-align: center;
         }
 
-        .box {
+        .feature {
             background: white;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .box h3 {
-            color: #b58c00;
+        .feature img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: #b8860b;
             margin: 10px 0;
         }
 
-        .produtos-section {
+        .products-section {
             padding: 40px 20px;
             background-color: #fff;
+            text-align: center;
         }
 
-        .produtos-section h2 {
-            text-align: center;
+        .products-section h2 {
             margin-bottom: 30px;
             color: #800000;
         }
 
-        .produtos-grid {
+        .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
+            justify-items: center;
         }
 
-        .produto {
-            background-color: #fafafa;
-            border-radius: 10px;
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .produto img {
-            max-width: 100%;
+        .product img {
+            width: 100%;
             height: auto;
             margin-bottom: 15px;
         }
 
-        .produto h3 {
-            color: #800000;
-            margin-bottom: 10px;
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
         }
 
-        .produto p {
-            color: #444;
-            font-size: 14px;
+        .product p {
+            font-size: 0.9em;
+            color: #555;
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>LAN TROLL</h1>
-        <p>ENTREGAMOS EM TODO O BRASIL</p>
+        <h1>Catálogo Lantroll</h1>
     </header>
 
-    <img src="BANNER CABEÇALHO LANTROL.png.png" alt="Banner 1" class="banner">
-    <img src="BANNER-MARCA.png" alt="Banner 2" class="banner">
+    <img class="banner" src="BANNER CABEÇALHO LANTROL.png.png" alt="Banner Lantroll">
+    <img class="banner" src="BANNER-MARCA.png" alt="Banner Marca">
 
-    <div class="section-qualidade">
-        <div class="box">
-            <img src="MEIO SITE.PNG" alt="Qualidade">
+    <section class="features">
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Qualidade">
             <h3>QUALIDADE</h3>
-            <p>
-                É nossa missão entregar aos nossos clientes a melhor qualidade de produtos farmacêuticos garantido através de processos que atendam a todos os padrões exigidos pelo MSP. AND B.S
-            </p>
+            <p>É nossa missão entregar aos nossos clientes a melhor qualidade de produtos farmacêuticos garantido através de processos que atendam a todos os padrões exigidos pelo MSP. AND B.S</p>
         </div>
-        <div class="box">
-            <img src="MEIO SITE.PNG" alt="Autenticidade">
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942799.png" alt="Autenticidade">
             <h3>AUTENTICIDADE</h3>
-            <p>
-                Garantimos a oferta dos mais recentes sistemas de autenticação de tecnologia em cada produto para proteger nossos consumidores.
-            </p>
+            <p>Garantimos a oferta dos mais recentes sistemas de autenticação de tecnologia em cada produto para proteger nossos consumidores.</p>
         </div>
-        <div class="box">
-            <img src="MEIO SITE.PNG" alt="Tecnologia">
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942782.png" alt="Tecnologia">
             <h3>TECNOLOGIA</h3>
-            <p>
-                Nossa produção é equipada com a mais alta tecnologia do mercado farmacêutico.
-            </p>
+            <p>Nossa produção é equipada com a mais alta tecnologia do mercado farmacêutico.</p>
         </div>
-    </div>
+    </section>
 
-    <section class="produtos-section">
+    <section class="products-section">
         <h2>Nossos Produtos</h2>
-        <div class="produtos-grid">
-            <div class="produto">
+        <div class="products">
+            <div class="product">
                 <img src="PRODUTO01.jpg" alt="Durateston Plus Gold">
                 <h3>Durateston Plus Gold 250mg/mL</h3>
                 <p>250mg/ml | LANTROLL<br>Produto com certificado GMP</p>
             </div>
-            <div class="produto">
+            <div class="product">
                 <img src="PRODUTO02.webp" alt="Decaland Nandrolona">
                 <h3>Decaland Nandrolona 10ml</h3>
                 <p>200mg/10ml | LANTROLL<br>Produto com certificado GMP</p>
@@ -145,8 +140,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 LANTROLL - Todos os direitos reservados</p>
+        &copy; 2025 Lantroll - Todos os direitos reservados
     </footer>
 </body>
-
 </html>
+
