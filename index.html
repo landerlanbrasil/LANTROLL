@@ -23,18 +23,23 @@
       margin: 0;
     }
 
-    .banner, .banner-marca {
+    .banner {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
-    }
-
-    .banner {
       max-height: 200px;
     }
 
+    .banner-container {
+      margin-top: 10px;
+    }
+
     .banner-marca {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
       max-height: 220px;
     }
 
@@ -136,7 +141,9 @@
   <img src="BANNER CABEÇALHO LANTROL.png.png" alt="Banner LANTROLL" class="banner">
 
   <!-- Segundo banner estático -->
-  <img src="BANNER-MARCA.png" alt="Banner Marca" class="banner-marca">
+  <div class="banner-container">
+    <img src="BANNER-MARCA.png" alt="Banner Marca" class="banner-marca">
+  </div>
 
   <!-- Catálogo de produtos -->
   <div class="catalogo">
@@ -169,10 +176,3 @@
 
 </body>
 </html>
-
-
-
-  
-
-    
-
