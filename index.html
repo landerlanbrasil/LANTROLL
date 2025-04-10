@@ -33,6 +33,41 @@
       margin-top: 10px;
     }
 
+    /* Seção de Qualidade, Autenticidade, Tecnologia */
+    .valores {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f3f3f3;
+      text-align: center;
+    }
+
+    .valor-box {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .valor-box img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .valor-box h3 {
+      color: #b8860b; /* Dourado escuro */
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .valor-box p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Catálogo */
     .catalogo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -126,6 +161,25 @@
   <div class="banner-container">
     <img src="BANNER-MARCA.png" alt="Banner Marca" class="banner-marca">
   </div>
+
+  <!-- Seção de valores -->
+  <section class="valores">
+    <div class="valor-box">
+      <img src="https://img.icons8.com/color/48/shield.png" alt="Qualidade">
+      <h3>QUALIDADE</h3>
+      <p>É nossa missão entregar aos nossos clientes a melhor qualidade de produtos farmacêuticos garantido através de processos que atendam a todos os padrões exigidos pelo MSP. AND B.S</p>
+    </div>
+    <div class="valor-box">
+      <img src="https://img.icons8.com/color/48/fingerprint.png" alt="Autenticidade">
+      <h3>AUTENTICIDADE</h3>
+      <p>Garantimos a oferta dos mais recentes sistemas de autenticação de tecnologia em cada produto para proteger nossos consumidores.</p>
+    </div>
+    <div class="valor-box">
+      <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="Tecnologia">
+      <h3>TECNOLOGIA</h3>
+      <p>Nossa produção é equipada com a mais alta tecnologia do mercado farmacêutico.</p>
+    </div>
+  </section>
 
   <!-- Catálogo de produtos -->
   <div class="catalogo">
