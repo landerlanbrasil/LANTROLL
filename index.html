@@ -25,10 +25,10 @@
         }
 
         .verificar-btn {
-            background-color: white;
-            border: 2px solid white;
+            background-color: transparent;
+            border: none;
             font-weight: bold;
-            color: #800000;
+            color: white;
             cursor: pointer;
             font-size: 1em;
             padding: 10px 20px;
@@ -38,8 +38,7 @@
         }
 
         .verificar-btn:hover {
-            background-color: #f2f2f2;
-            border-color: #f2f2f2;
+            color: #f2f2f2;
         }
 
         .banner {
@@ -102,8 +101,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
-            flex: 1;
-            min-width: 200px;
+            flex: 1 1 250px;
             max-width: 300px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -126,9 +124,14 @@
         }
 
         @media (max-width: 600px) {
-            .features, .products {
+            .products, .features {
                 flex-direction: row;
                 flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .product {
+                flex: 1 1 45%;
             }
         }
     </style>
@@ -181,14 +184,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
