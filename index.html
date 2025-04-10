@@ -23,12 +23,30 @@
       margin: 0;
     }
 
-    .banner {
+    .banner,
+    .banner-marca {
       width: 100%;
       height: auto;
       display: block;
-      max-height: 200px;
       object-fit: cover;
+    }
+
+    .banner {
+      max-height: 200px;
+    }
+
+    .banner-marca {
+      max-height: 220px;
+      animation: flutuar 6s ease-in-out infinite;
+    }
+
+    @keyframes flutuar {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     .catalogo {
@@ -95,7 +113,6 @@
       font-size: 14px;
     }
 
-    /* Responsivo */
     @media (max-width: 768px) {
       header, footer {
         padding: 15px;
@@ -107,6 +124,10 @@
       }
 
       .banner {
+        max-height: 150px;
+      }
+
+      .banner-marca {
         max-height: 150px;
       }
 
@@ -122,17 +143,20 @@
     <h1>Catálogo de Produtos</h1>
   </header>
 
-  <!-- Banner -->
+  <!-- Banner principal -->
   <img src="BANNER CABEÇALHO LANTROL.png.png" alt="Banner LANTROLL" class="banner">
 
-  <!-- Catálogo -->
+  <!-- Segundo banner com animação -->
+  <img src="BANNER-MARCA.png" alt="Banner Marca" class="banner-marca">
+
+  <!-- Catálogo de produtos -->
   <div class="catalogo">
     <div class="produto">
       <img src="https://via.placeholder.com/200" alt="Produto 1">
       <h2>Produto 1</h2>
       <p>Descrição breve do produto.</p>
       <div class="preco">R$ 99,90</div>
-      <a href="produto1.html" class="botao">Comprar</a>
+      <a href="#" class="botao">Comprar</a>
     </div>
     <div class="produto">
       <img src="https://via.placeholder.com/200" alt="Produto 2">
@@ -150,10 +174,14 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Catálogo de Produtos. Todos os direitos reservados.</p>
   </footer>
 
 </body>
 </html>
+
+
+     
+    
+
