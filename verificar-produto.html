@@ -1,182 +1,188 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> 
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Verificação de Produto</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    .header {
-      background-color: #800000;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 10;
-    }
-
-    .logo {
-      width: 50px;
-      margin-left: 20px;
-    }
-
-    .nav {
-      display: flex;
-      gap: 20px;
-      margin-right: 20px;
-    }
-
-    .nav a {
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .left-banner {
-      position: fixed;
-      top: 100px;
-      left: 0;
-      width: 120px;
-      z-index: 1;
-    }
-
-    .left-banner img {
-      width: 100%;
-      height: auto;
-    }
-
-    .main-container {
-      padding-left: 130px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .banner {
-      background: url('https://via.placeholder.com/1500x400') no-repeat center;
-      background-size: cover;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: black;
-      font-weight: bold;
-    }
-
-    .content {
-      padding: 40px 20px;
-    }
-
-    .message {
-      background-color: #28a745;
-      color: white;
-      padding: 20px;
-      font-size: 24px;
-      border-radius: 10px;
-      display: none;
-      margin-top: 10px;
-    }
-
-    .gold-text {
-      color: gold;
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 20px;
-      display: none;
-    }
-
-    .red-text {
-      color: red;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 5px;
-      display: none;
-    }
-
-    .input-box {
-      margin-top: 20px;
-    }
-
-    .input-box input {
-      padding: 10px;
-      font-size: 16px;
-      width: 80%;
-      max-width: 400px;
-    }
-
-    @media (max-width: 768px) {
-      .left-banner {
-        display: none;
-      }
-
-      .main-container {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-    }
-  </style>
-
-  <script>
-    function showMessage(event) {
-      if (event.key === 'Enter') {
-        var message = document.getElementById('message');
-        var goldText = document.getElementById('goldText');
-        var redText = document.getElementById('redText');
-        var input = document.getElementById('productInput').value.trim().toUpperCase();
-
-        if (input === "L25077") {
-          goldText.innerText = "TESTENAT DEPOT";
-          goldText.style.display = 'block';
-          redText.innerText = "ENANTATO TESTOSTERONA 250 mg/mL";
-          redText.style.display = 'block';
-          message.style.display = 'block';
-        } else {
-          message.style.display = 'none';
-          goldText.style.display = 'none';
-          redText.style.display = 'none';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Lantroll</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
         }
-      }
-    }
-  </script>
+
+        header, footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        .verificar-btn {
+            background-color: transparent;
+            border: 2px solid #b8860b;
+            font-weight: bold;
+            color: #b8860b;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .verificar-btn:hover {
+            background-color: #b8860b;
+            color: #121212;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #1e1e1e;
+            text-align: center;
+        }
+
+        .feature {
+            background: #2c2c2c;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        .feature img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: #b8860b;
+            margin: 10px 0;
+        }
+
+        .products-section {
+            padding: 40px 20px;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .product {
+            background: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1 1 250px;
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #f5f5f5;
+        }
+
+        .product p {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        @media (max-width: 600px) {
+            .products, .features {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .product {
+                flex: 1 1 45%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="LOGO-LANTROLL.png" alt="Logo Lantroll">
+        <a class="verificar-btn" href="verificar-produto.html">Verificar Produto</a>
+    </header>
 
-  <div class="header">
-    <img src="LANDERLAN.png" alt="Logo Landerlan" class="logo" />
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="index.html#produtos">Produtos</a>
-      <a href="index.html#clientes">Clientes</a>
-    </nav>
-  </div>
+    <img class="banner" src="banner-lantroll.gif.gif" alt="Banner Lantroll">
+    <img class="banner" src="BANNER-MARCA.gif" alt="Banner Marca">
 
-  <div class="left-banner">
-    <img src="Lantrol.gif" alt="Banner Lateral Animado" />
-  </div>
+    <section class="features">
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Qualidade">
+            <h3>QUALIDADE</h3>
+            <p>É nossa missão entregar aos nossos clientes a melhor qualidade de produtos farmacêuticos garantido através de processos que atendam a todos os padrões exigidos pelo MSP. AND B.S</p>
+        </div>
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942799.png" alt="Autenticidade">
+            <h3>AUTENTICIDADE</h3>
+            <p>Garantimos a oferta dos mais recentes sistemas de autenticação de tecnologia em cada produto para proteger nossos consumidores.</p>
+        </div>
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942782.png" alt="Tecnologia">
+            <h3>TECNOLOGIA</h3>
+            <p>Nossa produção é equipada com a mais alta tecnologia do mercado farmacêutico.</p>
+        </div>
+    </section>
 
-  <div class="main-container">
-    <div class="banner">
-      AUTENTICIDADE DO PRODUTO
-    </div>
-    <div class="content">
-      <h1>Verificar Produto</h1>
-      <div class="input-box">
-        <input type="text" id="productInput" placeholder="Informe o lote do produto" onkeypress="showMessage(event)" />
-      </div>
-      <div id="message" class="message">✅ Esse produto é original</div>
-      <div id="goldText" class="gold-text"></div>
-      <div id="redText" class="red-text"></div>
-    </div>
-  </div>
+    <section class="products-section">
+        <h2>Nossos Produtos</h2>
+        <div class="products">
+            <div class="product">
+                <img src="PRODUTO01.jpg" alt="Durateston Plus Gold">
+                <h3>Durateston Plus Gold 250mg/mL</h3>
+                <p>250mg/ml | LANTROLL<br>Produto com certificado GMP</p>
+            </div>
+            <div class="product">
+                <img src="PRODUTO02.webp" alt="Decaland Nandrolona">
+                <h3>Decaland Nandrolona 10ml</h3>
+                <p>200mg/10ml | LANTROLL<br>Produto com certificado GMP</p>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        &copy; 2025 Lantroll - Todos os direitos reservados
+    </footer>
 </body>
 </html>
